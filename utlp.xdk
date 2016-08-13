@@ -2,10 +2,10 @@
   "project": {
     "creationData": {
       "type": "Import",
-      "projectTypeName": "com.intel.xdk.projecttype.webapp",
+      "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "",
       "projectGuid": "edc92ffe-4ce5-4059-803a-78c1e2d0dfc5",
-      "lastModifiedDate": 1471014834507,
+      "lastModifiedDate": 1471079291706,
       "creationDate": 1471014680004
     },
     "gameAssetDirectory": "asset",
@@ -39,13 +39,15 @@
     "buildConfigurations": {
       "Android": {
         "platform_": "android",
-        "runtime_": "W3C on Crosswalk",
+        "runtime_": "Crosswalk with Cordova 3.x",
         "name_": "Android",
         "preferences_": {
           "android-minSdkVersion": "14",
           "android-targetSdkVersion": "23",
           "android-installLocation": "auto",
-          "android-signed": true
+          "android-signed": true,
+          "Fullscreen": true,
+          "Orientation": "landscape"
         },
         "isActive_": true,
         "certificateId_": "",
@@ -66,11 +68,12 @@
         "appVersionCode_": "1",
         "signed_": true,
         "crosswalkVersion_": "18",
-        "cordovaCLIVersion_": "6.2.0"
+        "cordovaCLIVersion_": "6.2.0",
+        "appAuthor_": "five"
       },
       "iOS": {
         "platform_": "ios",
-        "runtime_": "W3C on Cordova",
+        "runtime_": "Cordova 3.x",
         "name_": "iOS",
         "preferences_": {
           "deployment-target": "8.0",
@@ -97,7 +100,7 @@
       },
       "Windows8": {
         "platform_": "windows8",
-        "runtime_": "W3C on Cordova",
+        "runtime_": "Cordova 3.x",
         "name_": "Windows8",
         "preferences_": {},
         "isActive_": true,
@@ -123,7 +126,7 @@
         "runtime_": "W3C",
         "name_": "WebApp",
         "preferences_": {},
-        "isActive_": true,
+        "isActive_": false,
         "certificateId_": "",
         "appVersion_": "0.0.1"
       },
@@ -132,7 +135,7 @@
         "runtime_": "W3C on Firefox OS",
         "name_": "Firefox",
         "preferences_": {},
-        "isActive_": true,
+        "isActive_": false,
         "certificateId_": "",
         "appVersion_": "0.0.1"
       },
@@ -141,7 +144,7 @@
         "runtime_": "W3C on Chrome OS",
         "name_": "Chrome",
         "preferences_": {},
-        "isActive_": true,
+        "isActive_": false,
         "certificateId_": "",
         "appName_": "utlp",
         "appID_": "not.yet.specified",
@@ -154,13 +157,13 @@
         "runtime_": "W3C on Facebook",
         "name_": "Facebook",
         "preferences_": {},
-        "isActive_": true,
+        "isActive_": false,
         "certificateId_": "",
         "appVersion_": "0.0.1"
       },
       "WP81": {
         "platform_": "wp81",
-        "runtime_": "W3C on Cordova",
+        "runtime_": "Cordova 3.x",
         "name_": "WP81",
         "preferences_": {},
         "isActive_": true,
@@ -185,6 +188,27 @@
     "serviceMethods": [],
     "sourceDirectory": "www",
     "startFile": "index.html",
-    "projectSettingsVersion": "3.0.0"
+    "projectSettingsVersion": "3.0.0",
+    "cordovaPluginsDirectory": "plugins",
+    "cordovaPlugins": [
+      {
+        "id": "cordova-plugin-device",
+        "name": "Device",
+        "version": "1.1.2",
+        "originType": "cordova.io",
+        "origin": "cordova-plugin-device",
+        "gitref": "",
+        "paramvals": {},
+        "sourceLocation": "plugins/cordova-plugin-device",
+        "selectedState": "Included",
+        "checksum": "2373ccea",
+        "dependsOn": [],
+        "topLevel": true,
+        "permissions": {},
+        "description": "Cordova Device Plugin",
+        "data": {},
+        "dependedBy": []
+      }
+    ]
   }
 }

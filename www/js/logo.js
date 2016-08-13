@@ -9,12 +9,12 @@ utlp.Logo.prototype = {
 	l1 : false,
 	l2 : false,
 	preload : function() {
-		this.time = new Date().getTime();
+		this.time = this.game.time.totalElapsedSeconds()*1000;//new Date().getTime();
 	},
 	create : function() {
 	},
 	update : function() {
-		t = new Date().getTime();
+		t = this.game.time.totalElapsedSeconds()*1000;
 		t -= this.time;
 		t1 = 6000;
 		t2 = 11000;
@@ -33,7 +33,8 @@ utlp.Logo.prototype = {
 			}
 			alpha = t / ta;
 			this.logo.alpha = alpha > 1 ? 1 : alpha;
-			step=100;
+            this.textLogo.setText(typeInAcronym(['Five','Is','Very','Elegant'],t-1000));
+			/*step=100;
 			tb=1000;
 			if ((t>tb)&&(t<tb+step)) this.textLogo.setText('F IVE');
 			tb+=step;
@@ -65,14 +66,14 @@ utlp.Logo.prototype = {
 			tb+=step;
 			if ((t>tb)&&(t<tb+step)) this.textLogo.setText('Five Is Very Elegan');
 			tb+=step;
-			if ((t>tb)&&(t<tb+step)) this.textLogo.setText('Five Is Very Elegant');
+			if ((t>tb)&&(t<tb+step)) this.textLogo.setText('Five Is Very Elegant');*/
 			this.textLogo.centerX = this.game.width / 2;
 			this.textLogo.centerY = this.game.height / 2 + 150;
 		}
 		if ((t > t1) && (t < t2)) {
 			if (!this.l2) {
 				this.logo.kill();
-				this.textLogo.setText('Build with Phaser engine');
+				this.textLogo.setText(typeInAnimation('Build with Phaser engine',t-t1));
 				this.textLogo.centerX = this.game.width / 2;
 				this.textLogo.centerY = this.game.height / 2 + 200;
 				this.logoPhaser = this.add.sprite(0, 0, 'phaser');
@@ -81,6 +82,9 @@ utlp.Logo.prototype = {
 				this.l2 = true;
 
 			}
+            this.textLogo.setText(typeInAnimation('Build with Phaser engine',t-t1));
+            this.textLogo.centerX = this.game.width / 2;
+				this.textLogo.centerY = this.game.height / 2 + 200;
 			alpha = (t - t1) / ta;
 			this.logoPhaser.alpha = alpha > 1 ? 1 : alpha;
 		}
