@@ -8,10 +8,12 @@ utlp.Logo = function(game) {
 utlp.Logo.prototype = {
 	l1 : false,
 	l2 : false,
+    skip:0,
 	preload : function() {
 		this.time = this.game.time.totalElapsedSeconds()*1000;//new Date().getTime();
 	},
 	create : function() {
+        this.input.onTap.add(skipLogo,this);
 	},
 	update : function() {
 		t = this.game.time.totalElapsedSeconds()*1000;
@@ -19,6 +21,10 @@ utlp.Logo.prototype = {
 		t1 = 6000;
 		t2 = 11000;
 		ta=2000;
+        switch (this.skip) {
+            case 1:t+=t1;break;
+            case 2:t+=t2;
+        }
 		if (t < t1) {
 			if (!this.l1) {
 				this.logo = this.add.sprite(0, 0, 'five');
@@ -34,39 +40,6 @@ utlp.Logo.prototype = {
 			alpha = t / ta;
 			this.logo.alpha = alpha > 1 ? 1 : alpha;
             this.textLogo.setText(typeInAcronym(['Five','Is','Very','Elegant'],t-1000));
-			/*step=100;
-			tb=1000;
-			if ((t>tb)&&(t<tb+step)) this.textLogo.setText('F IVE');
-			tb+=step;
-			if ((t>tb)&&(t<tb+step)) this.textLogo.setText('Fi IVE');
-			tb+=step;
-			if ((t>tb)&&(t<tb+step)) this.textLogo.setText('Fiv IVE');
-			tb+=step;
-			if ((t>tb)&&(t<tb+step)) this.textLogo.setText('Five IVE');
-			tb+=step;
-			if ((t>tb)&&(t<tb+step)) this.textLogo.setText('Five I VE');
-			tb+=step;
-			if ((t>tb)&&(t<tb+step)) this.textLogo.setText('Five Is VE');
-			tb+=step;
-			if ((t>tb)&&(t<tb+step)) this.textLogo.setText('Five Is V E');
-			tb+=step;
-			if ((t>tb)&&(t<tb+step)) this.textLogo.setText('Five Is Ve E');
-			tb+=step;
-			if ((t>tb)&&(t<tb+step)) this.textLogo.setText('Five Is Ver E');
-			tb+=step;
-			if ((t>tb)&&(t<tb+step)) this.textLogo.setText('Five Is Very E');
-			tb+=step;
-			if ((t>tb)&&(t<tb+step)) this.textLogo.setText('Five Is Very El');
-			tb+=step;
-			if ((t>tb)&&(t<tb+step)) this.textLogo.setText('Five Is Very Ele');
-			tb+=step;
-			if ((t>tb)&&(t<tb+step)) this.textLogo.setText('Five Is Very Eleg');
-			tb+=step;
-			if ((t>tb)&&(t<tb+step)) this.textLogo.setText('Five Is Very Elega');
-			tb+=step;
-			if ((t>tb)&&(t<tb+step)) this.textLogo.setText('Five Is Very Elegan');
-			tb+=step;
-			if ((t>tb)&&(t<tb+step)) this.textLogo.setText('Five Is Very Elegant');*/
 			this.textLogo.centerX = this.game.width / 2;
 			this.textLogo.centerY = this.game.height / 2 + 150;
 		}
@@ -92,3 +65,7 @@ utlp.Logo.prototype = {
 			this.state.start('Menu');
 	}
 };
+
+function skipLogo() {
+    utlp.Logo.prototype.skip++;
+}
