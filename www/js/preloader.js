@@ -22,6 +22,8 @@ utlp.Preloader.prototype = {
 		this.load.setPreloadSprite(this.preloadBar);
 		this.load.image('phaser', 'asset/img/phaser.png');
 		this.load.image('five', 'asset/img/five.png');
+        this.load.image('star', 'asset/img/star.png');
+        this.load.image('ship', 'asset/img/ship.png');
 		/* for test progress bar
 		this.load.image('prova', 'http://it.chromaate.com/chroma/webdrive/products/6310a/6310a_4.jpg?' + Math.random(100));
 		this.load.image('prova2', 'http://it.chromaate.com/chroma/webdrive/products/6310a/6310a_4.jpg?' + Math.random(100));

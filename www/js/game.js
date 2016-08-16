@@ -5,16 +5,11 @@ utlp.Game.prototype = {
     create: function(){ 
       this.add.text(10, 10, 'this is a game', {fill: '#fff'});
         document.addEventListener("backbutton", onBackKeyDown);
-    //this.game.input.on
+        esc = this.game.input.keyboard.addKey(Phaser.Keyboard.ESC);
+    	esc.onDown.add(onBackKeyDown, this);
+	this.game.input.keyboard.removeKeyCapture(Phaser.Keyboard.ESC);
     }
 };
 function onBackKeyDown(ev) {
-    
-    if (game.state.current=="Game") {
         game.state.start("Menu");
-        return false;
-    }
-    else {
-        navigator.app.exitApp();
-    }
 }
