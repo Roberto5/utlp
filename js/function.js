@@ -1,6 +1,3 @@
-/**
-
-*/
 function typeInAnimation(text,time,delay){
     var n,r='';
     if (!delay) delay=100;

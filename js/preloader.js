@@ -10,10 +10,11 @@ utlp.Preloader.prototype = {
 	preload : function() {
 		this.preloadLogo = this.add.sprite(0, 0, 'logo');
 		this.preloadLogo.x = this.game.width / 2;
-		this.preloadLogo.y = this.game.height / 2 - 50;
-		this.centerBar = [this.game.width / 2,this.game.height / 2 + 50];
+		this.preloadLogo.y = this.game.height / 2 - 50*scale;
+		this.preloadLogo.setScale(scale);
+		this.centerBar = [this.game.width / 2,this.game.height / 2 + 50*scale];
 		this.preloadBar = this.add.graphics();
-		this.dimBar=[200,50];
+		this.dimBar=[200*scale,50*scale];
 		this.preloadFrame = this.add.graphics();
 		this.preloadFrame.fillStyle(0x222222, 0.8);
 		this.preloadFrame.fillRect(this.centerBar[0]-this.dimBar[0]/2, this.centerBar[1]-this.dimBar[1]/2, this.dimBar[0], this.dimBar[1]);

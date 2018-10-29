@@ -1,11 +1,17 @@
+ratio=16/9;
 var config = {
     type: Phaser.AUTO,
-    width: 720,
-    height: 480,
+    scale: {
+        mode: Phaser.DOM.FILL,
+        width: window.innerHeight*ratio,
+        height: window.innerHeight
+    },
     parent:'game'
 };
-document.getElementById("game").style.width = '730';
-document.getElementById("game").style.height = '480';
+// 800:50=h:x   x=y*h/800
+var scale= window.innerHeight*ratio/800;
+var language= {};
+var lang;
 
 var game = new Phaser.Game(config);
     game.scene.add('Boot', utlp.Boot);
@@ -14,6 +20,6 @@ var game = new Phaser.Game(config);
     game.scene.add('Menu',utlp.Menu);
     game.scene.add('Game', utlp.Game);
     game.scene.add('How',utlp.How);
+    game.scene.add('Shipyard',utlp.Shipyard);
     game.scene.start('Boot');
-    game.height=480;
-    game.width=720;
+    
