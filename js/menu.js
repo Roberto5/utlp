@@ -29,7 +29,6 @@ utlp.Menu.prototype = {
         //ship
         this.ship=this.add.sprite(100*scale,this.game.height/2,'ship');
         //this.ship.anchor.set(0.5);
-        this.ship.y=this.game.height/2;
         this.ship.setScale(scale);
         //this.game.physics.enable(this.ship, Phaser.Physics.ARCADE);
         this.title=this.add.text(this.game.width/2, 10*scale, 'Until The Last Piece', {fill: '#fff'});

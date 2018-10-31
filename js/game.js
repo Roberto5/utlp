@@ -19,7 +19,6 @@ utlp.Game.prototype = {
     			  game.scene.stop("Game");
     		  
     	  }
-    	  //console.log(event);
       });
       this.frame=this.add.graphics();
       this.frame.fillStyle(0x222222, 0.8);
@@ -42,7 +41,7 @@ utlp.Game.prototype = {
         	  if (validateSave(save)) {
         		  this.slot[i].save=JSON.parse(save);
         		  time=new Date(this.slot[i].save.last);
-        		  text=this.slot[i].save.playerName+" "+time.toLocaleString();
+        		  text=this.slot[i].save.playerName+" "+time.toLocaleString()+"\n"+this.slot[i].save.progress+"%";
         	  }
         	  else text=lang.empty;
           }
@@ -59,34 +58,3 @@ utlp.Game.prototype = {
       }
     }
 };
-/**
- * validate the savegame
- * @param content String
- * @return boolean
- * 
- * save - last
- * 		-playerName
- * @todo add data
- * 
- */
-function validateSave(content) {
-	try {
-		var obj=JSON.parse(content);
-	}
-	catch (e) {
-		obj=false;
-	}
-	bool=true;
-	if (obj) {
-		bool=bool&&(obj.last);
-		bool=bool&&(obj.playerName);
-		//bool=bool&&();
-	}
-	else bool=false;
-	return bool;
-}
-
-function loadGame(event) {
-	console.log("carico il salvataggio "+this.i,this.save);
-	//@todo create save game with html form
-}

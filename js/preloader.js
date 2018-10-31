@@ -29,6 +29,7 @@ utlp.Preloader.prototype = {
         this.load.image('star', 'asset/img/star.png');
         this.load.image('ship', 'asset/img/ship.png');
         this.load.image('jets', 'asset/img/jets.png');
+        this.load.atlas('rooms','asset/img/room.png','asset/img/room.json');
 		/* for test progress bar*/
 		/*this.load.image('prova', 'http://it.chromaate.com/chroma/webdrive/products/6310a/6310a_4.jpg?q=' + Math.random(100));
 		this.load.image('prova2', 'http://it.chromaate.com/chroma/webdrive/products/6310a/6310a_4.jpg?' + Math.random(100));

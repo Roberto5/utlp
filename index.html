@@ -4,37 +4,79 @@
     body{
         padding: 0px;
         margin: 0px;  
-        background: black;
+        background: black url(asset/img/bg.jpg);
     }
     canvas {
     	margin: 0px auto;
         /*debug
         border: 1px solid white;*/
     }
+    #createSave {
+    	display:none;
+    	top: 20%;
+    	background: #050505;
+    	margin: 0px auto;
+    	border: 1px solid white;
+    	border-radius: 10px;
+    	padding: 1%;
+    	color: white;
+    	text-align: center;
+    }
+    .diff {
+    	display:inline-block;
+    	height:20%;
+    	border:1px solid white;
+    	border-radius: 10px;
+    	padding: 3px;
+    	cursor: pointer;
+    }
+    .diff:not(.selected):hover{
+    	border:2px solid green;
+    }
+    #button {
+    	height:20%;
+    	border:1px solid white;
+    	border-radius: 10px;
+    	cursor: pointer;
+		margin: 10% 0 0 70%;
+    	width: 30%;
+    }
+    #button:hover{
+    	border:2px solid green;
+    }
+    .selected {
+    	border:2px solid red;
+    }
 </style>
     <!--  <script src="cordova.js"></script>           "Phantom" cordova.js required for projects that use plugins -->
      
-<script type="text/javascript" src="js/phaser.min.js">
-</script>
-<script type="text/javascript" src="js/function.js">
-</script>
-<script type="text/javascript" src="js/boot.js">
-</script>
-<script type="text/javascript" src="js/preloader.js">
-</script>
-<script type="text/javascript" src="js/game.js">
-</script>
-<script type="text/javascript" src="js/shipyard.js">
-</script>
-<script type="text/javascript" src="js/logo.js">
-</script>
-<script type="text/javascript" src="js/menu.js">
-</script>
+<script type="text/javascript" src="js/phaser.min.js"></script>
+<script type="text/javascript" src="js/function.js"></script>
+<script type="text/javascript" src="js/boot.js"></script>
+<script type="text/javascript" src="js/preloader.js"></script>
+<script type="text/javascript" src="js/game.js"></script>
+<script type="text/javascript" src="js/shipyard.js"></script>
+<script type="text/javascript" src="js/intro.js"></script>
+<script type="text/javascript" src="js/logo.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" src="js/map.js"></script>
+<script type="text/javascript" src="js/ship.js"></script>
 <script type="text/javascript" src="js/how.js"></script>
 
 </head>
 <body>
  <div id="game" style="margin: auto;"></div>
+ <div style="position: absolute;top: 20%;width: 100%;"><div id="createSave">
+	<div id="displayName"></div> 
+ 	<input id="name" size="15" value="Robert" maxlength="20">
+ 	<input id="diff" type="hidden" value="1" max="3" min="1">
+ 	<div id="difficulty"></div>
+ 	<div>
+ 	<div id="easy" class="diff selected"></div>
+ 	<div id="normal" class="diff"></div>
+ 	<div id="hard" class="diff"></div></div>
+ 	<div id="button"></div>
+ </div></div>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="asset/language/it.js"></script>
 <script type="text/javascript" src="asset/language/en.js"></script>
