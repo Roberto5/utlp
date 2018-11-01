@@ -64,6 +64,7 @@ le stanze sono aggiornabili con i seguenti potenziamenti.
 ### corazza
 
 aggiunge un punto vita alla nave ed evita che la scanza riceva una breccia se colpita da un missile o da un arma balistica.
+un colpo di un arma balistica rimuove il potenzamento.
 
 ### sistema anti incendio 
 
