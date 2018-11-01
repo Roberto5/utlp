@@ -1,25 +1,13 @@
 {
-  "room": [
-    {
-      "type": "spritesheet",
-      "key": "room",
-      "url": "asset/img/room.png",
-      "frameWidth": 50,
-      "frameHeight": 50,
-      "frameMax": -1,
-      "margin": 0,
-      "spacing": 0
-    },
-    {
-      "type": "atlas",
-      "key": "room1",
-      "textureURL": "asset/img/room.png",
-      "atlasURL": "asset/img/room.json",
-      "format": "TEXTURE_ATLAS_JSON_HASH"
-    }
-  ],
+  "room": [{
+    "type": "atlas",
+    "key": "room1",
+    "textureURL": "asset/img/room.png",
+    "atlasURL": "asset/img/room.json",
+    "format": "TEXTURE_ATLAS_JSON_HASH"
+  }],
   "meta": {
-    "generated": "1541010710724",
+    "generated": "1541069863966",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

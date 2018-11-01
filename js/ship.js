@@ -18,15 +18,16 @@ utlp.Ship.prototype = {
 	    	this.stars.push(star);
 	    }
 	    
-	    this.room=this.add.sprite(0,0,'rooms','room1x1');
+	    this.room=this.add.sprite(0,0,'rooms','room2x1');
+	    this.room.setScale(scale);
         
-        this.door=this.add.sprite(0,-this.room.height/2,'rooms','door0');this.room.setScale(scale);
+        this.door=this.add.sprite(0,-this.room.height*scale/2,'rooms','door0');
         //this.door.setOrigin(0.5,1);
-        this.door.setScale(scale,scale*2);
+        this.door.setScale(scale);
         this.anims.create({ key: 'open', frames: this.anims.generateFrameNames('rooms',{prefix:'door',start:0,end:5}) });
         this.anims.create({ key: 'close', frames: this.anims.generateFrameNames('rooms',{prefix:'door',start:5,end:0}) });
         this.door.open=false;
-        this.door.setInteractive();
+        this.door.setInteractive(new Phaser.Geom.Rectangle(0, -this.door.height, this.door.width, this.door.height*3), Phaser.Geom.Rectangle.Contains);
         this.door.on('pointerdown',function(){
         	if (this.open) this.play('close');
         	else this.play('open');

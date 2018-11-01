@@ -1,74 +1,189 @@
-{"frames":
-	{
-		"room1x1":{
-			"frame":{
-				"x":0,"y":0,"w":50,"h":50
-			},
-			"rotated":false,
-			"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":50,"h":50},"sourceSize":{"w":50,"h":50}},
-		"room2x1":{
-			"frame":{
-				"x":50,"y":0,"w":100,"h":50
-			},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":100,"h":50},"sourceSize":{"w":100,"h":50}},
-		
-		"room2x2":{
-			"frame":{
-				"x":0,"y":50,"w":100,"h":100
-			},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":100,"h":100},"sourceSize":{"w":100,"h":100}},
-		
-		"door0":{
-			"frame":{
-				"x":100,"y":50,"w":50,"h":4
-			},
-			"rotated":false,
-			"trimmed":false,
-			"spriteSourceSize":{"x":0,"y":0,"w":50,"h":4},
-			"sourceSize":{"w":50,"h":2}
-		},
-		"door1":{
-			"frame":{
-				"x":100,"y":54,"w":50,"h":4
-			},
-			"rotated":false,
-			"trimmed":false,
-			"spriteSourceSize":{"x":0,"y":0,"w":50,"h":4},
-			"sourceSize":{"w":50,"h":2}
-		},
-		"door2":{
-			"frame":{
-				"x":100,"y":58,"w":50,"h":4
-			},
-			"rotated":false,
-			"trimmed":false,
-			"spriteSourceSize":{"x":0,"y":0,"w":50,"h":4},
-			"sourceSize":{"w":50,"h":2}
-		},
-		"door3":{
-			"frame":{
-				"x":100,"y":62,"w":50,"h":4
-			},
-			"rotated":false,
-			"trimmed":false,
-			"spriteSourceSize":{"x":0,"y":0,"w":50,"h":4},
-			"sourceSize":{"w":50,"h":2}
-		},
-		"door4":{
-			"frame":{
-				"x":100,"y":66,"w":50,"h":4
-			},
-			"rotated":false,
-			"trimmed":false,
-			"spriteSourceSize":{"x":0,"y":0,"w":50,"h":4},
-			"sourceSize":{"w":50,"h":2}
-		},
-		"door5":{
-			"frame":{
-				"x":100,"y":70,"w":50,"h":4
-			},
-			"rotated":false,
-			"trimmed":false,
-			"spriteSourceSize":{"x":0,"y":0,"w":50,"h":4},
-			"sourceSize":{"w":50,"h":2}
-		}
-	},
-"meta":{"app":"https://www.leshylabs.com/apps/sstool/","version":"Leshy SpriteSheet Tool v0.8.4","image":"room.png","size":{"w":150,"h":150},"scale":1}}
+{
+  "frames": {
+    "door0": {
+      "trimmed": false,
+      "rotated": false,
+      "frame": {
+        "x": 156,
+        "y": 48,
+        "w": 50,
+        "h": 4
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 50,
+        "h": 4
+      },
+      "sourceSize": {
+        "w": 50,
+        "h": 4
+      }
+    },
+    "door1": {
+      "trimmed": false,
+      "rotated": false,
+      "frame": {
+        "x": 156,
+        "y": 42,
+        "w": 50,
+        "h": 4
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 50,
+        "h": 4
+      },
+      "sourceSize": {
+        "w": 50,
+        "h": 4
+      }
+    },
+    "door2": {
+      "trimmed": false,
+      "rotated": false,
+      "frame": {
+        "x": 156,
+        "y": 36,
+        "w": 50,
+        "h": 4
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 50,
+        "h": 4
+      },
+      "sourceSize": {
+        "w": 50,
+        "h": 4
+      }
+    },
+    "door3": {
+      "trimmed": false,
+      "rotated": false,
+      "frame": {
+        "x": 156,
+        "y": 30,
+        "w": 50,
+        "h": 4
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 50,
+        "h": 4
+      },
+      "sourceSize": {
+        "w": 50,
+        "h": 4
+      }
+    },
+    "door4": {
+      "trimmed": false,
+      "rotated": false,
+      "frame": {
+        "x": 156,
+        "y": 24,
+        "w": 50,
+        "h": 4
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 50,
+        "h": 4
+      },
+      "sourceSize": {
+        "w": 50,
+        "h": 4
+      }
+    },
+    "door5": {
+      "trimmed": false,
+      "rotated": false,
+      "frame": {
+        "x": 156,
+        "y": 18,
+        "w": 50,
+        "h": 4
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 50,
+        "h": 4
+      },
+      "sourceSize": {
+        "w": 50,
+        "h": 4
+      }
+    },
+    "room1x1": {
+      "trimmed": false,
+      "rotated": false,
+      "frame": {
+        "x": 104,
+        "y": 2,
+        "w": 50,
+        "h": 50
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 50,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 50,
+        "h": 50
+      }
+    },
+    "room2x1": {
+      "trimmed": false,
+      "rotated": false,
+      "frame": {
+        "x": 104,
+        "y": 54,
+        "w": 100,
+        "h": 50
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 100,
+        "h": 50
+      }
+    },
+    "room2x2": {
+      "trimmed": false,
+      "rotated": false,
+      "frame": {
+        "x": 2,
+        "y": 4,
+        "w": 100,
+        "h": 100
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 100
+      },
+      "sourceSize": {
+        "w": 100,
+        "h": 100
+      }
+    }
+  },
+  "meta": {
+    "app": "Phaser Editor",
+    "version": "1",
+    "image": "room.png"
+  }
+}
