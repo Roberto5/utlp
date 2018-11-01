@@ -73,11 +73,11 @@ spegne automaticamente gli incendi nella stanza.
 
 ### motori
 
-i motori aumentano la velocità della nave, quindi aumenta la probabilità di schivare i colpi in arrivo. la probabilità massima di schivata non può superare il 50%. possono essere montati in stanze 1x2
+i motori aumentano la velocità della nave, quindi aumenta la probabilità di schivare i colpi in arrivo. la probabilità massima di schivata non può superare il 50%. possono essere montati in stanze 1x2 o 2x2
 
 ### console di guida
 
-la console di guida permette di manovrare la nave, ogni livello aumenta la probabilità di schivata, e l'ultimo livello permette alla nave di guidarsi da sola. può essere montato in staze 1x1
+la console di guida permette di manovrare la nave, ogni livello aumenta la probabilità di schivata, e l'ultimo livello permette alla nave di guidarsi da sola. può essere montato in staze 1x1 o più grandi
 
 ### reattore 
 
@@ -109,7 +109,7 @@ i sistemi difensivi difendono la nave dalle minacce in arrivo. possono essere di
 
 #### torretta interna
 
-spara a ogni nemico nella stanza in cui è montata
+spara a ogni nemico nella stanza in cui è montata, le stanze più grandi possono contenere più torrette.
 
 #### Laser a corto raggio
 

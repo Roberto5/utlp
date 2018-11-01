@@ -1,10 +1,50 @@
 {
   "frames": {
+    "airlock": {
+      "trimmed": false,
+      "rotated": false,
+      "frame": {
+        "x": 514,
+        "y": 2,
+        "w": 50,
+        "h": 50
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 50,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 50,
+        "h": 50
+      }
+    },
+    "controll": {
+      "trimmed": false,
+      "rotated": false,
+      "frame": {
+        "x": 462,
+        "y": 2,
+        "w": 50,
+        "h": 50
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 50,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 50,
+        "h": 50
+      }
+    },
     "door0": {
       "trimmed": false,
       "rotated": false,
       "frame": {
-        "x": 156,
+        "x": 670,
         "y": 48,
         "w": 50,
         "h": 4
@@ -24,7 +64,7 @@
       "trimmed": false,
       "rotated": false,
       "frame": {
-        "x": 156,
+        "x": 670,
         "y": 42,
         "w": 50,
         "h": 4
@@ -44,7 +84,7 @@
       "trimmed": false,
       "rotated": false,
       "frame": {
-        "x": 156,
+        "x": 670,
         "y": 36,
         "w": 50,
         "h": 4
@@ -64,7 +104,7 @@
       "trimmed": false,
       "rotated": false,
       "frame": {
-        "x": 156,
+        "x": 670,
         "y": 30,
         "w": 50,
         "h": 4
@@ -84,7 +124,7 @@
       "trimmed": false,
       "rotated": false,
       "frame": {
-        "x": 156,
+        "x": 670,
         "y": 24,
         "w": 50,
         "h": 4
@@ -104,7 +144,7 @@
       "trimmed": false,
       "rotated": false,
       "frame": {
-        "x": 156,
+        "x": 670,
         "y": 18,
         "w": 50,
         "h": 4
@@ -120,11 +160,51 @@
         "h": 4
       }
     },
+    "engine": {
+      "trimmed": false,
+      "rotated": false,
+      "frame": {
+        "x": 716,
+        "y": 54,
+        "w": 50,
+        "h": 50
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 50,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 50,
+        "h": 50
+      }
+    },
+    "intDef": {
+      "trimmed": false,
+      "rotated": false,
+      "frame": {
+        "x": 618,
+        "y": 2,
+        "w": 50,
+        "h": 50
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 50,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 50,
+        "h": 50
+      }
+    },
     "room1x1": {
       "trimmed": false,
       "rotated": false,
       "frame": {
-        "x": 104,
+        "x": 410,
         "y": 2,
         "w": 50,
         "h": 50
@@ -144,7 +224,7 @@
       "trimmed": false,
       "rotated": false,
       "frame": {
-        "x": 104,
+        "x": 410,
         "y": 54,
         "w": 100,
         "h": 50
@@ -165,6 +245,126 @@
       "rotated": false,
       "frame": {
         "x": 2,
+        "y": 4,
+        "w": 100,
+        "h": 100
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 100
+      },
+      "sourceSize": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    "shield": {
+      "trimmed": false,
+      "rotated": false,
+      "frame": {
+        "x": 104,
+        "y": 4,
+        "w": 100,
+        "h": 100
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 100
+      },
+      "sourceSize": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    "shuttle1x1": {
+      "trimmed": false,
+      "rotated": false,
+      "frame": {
+        "x": 566,
+        "y": 2,
+        "w": 50,
+        "h": 50
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 50,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 50,
+        "h": 50
+      }
+    },
+    "shuttle2x1": {
+      "trimmed": false,
+      "rotated": false,
+      "frame": {
+        "x": 614,
+        "y": 54,
+        "w": 100,
+        "h": 50
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 100,
+        "h": 50
+      }
+    },
+    "shuttle2x2": {
+      "trimmed": false,
+      "rotated": false,
+      "frame": {
+        "x": 308,
+        "y": 4,
+        "w": 100,
+        "h": 100
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 100
+      },
+      "sourceSize": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    "support2x1": {
+      "trimmed": false,
+      "rotated": false,
+      "frame": {
+        "x": 512,
+        "y": 54,
+        "w": 100,
+        "h": 50
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 100,
+        "h": 50
+      }
+    },
+    "support2x2": {
+      "trimmed": false,
+      "rotated": false,
+      "frame": {
+        "x": 206,
         "y": 4,
         "w": 100,
         "h": 100
