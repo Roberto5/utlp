@@ -17,15 +17,80 @@ utlp.Ship.prototype = {
 	    	var star=this.add.sprite(this.xx[i], this.yy[i], 'star');
 	    	this.stars.push(star);
 	    }
-	    
-	    this.room=this.add.sprite(0,0,'rooms','room2x1');
-	    this.room.setScale(scale);
-        
-        this.door=this.add.sprite(0,-this.room.height*scale/2,'rooms','door0');
-        //this.door.setOrigin(0.5,1);
-        this.door.setScale(scale);
-        this.anims.create({ key: 'open', frames: this.anims.generateFrameNames('rooms',{prefix:'door',start:0,end:5}) });
+	    this.ship=new Starship({
+	    	door:[
+	    	      {
+	    	    	  x:1,
+	    	    	  y:1,
+	    	    	  rotation:90
+	    	      },
+	    	      {
+	    	    	  x:1,
+	    	    	  y:1,
+	    	    	  rotation:180
+	    	      },
+	    	      {
+	    	    	  x:2,
+	    	    	  y:1,
+	    	    	  rotation:90
+	    	      },
+	    	      {
+	    	    	  x:2,
+	    	    	  y:1,
+	    	    	  rotation:0
+	    	      },
+	    	      {
+	    	    	  x:1,
+	    	    	  y:2,
+	    	    	  rotation:180
+	    	      },
+	    	      {
+	    	    	  x:1,
+	    	    	  y:2,
+	    	    	  rotation:270
+	    	      },
+	    	      {
+	    	    	  x:2,
+	    	    	  y:2,
+	    	    	  rotation:0
+	    	      },
+	    	      {
+	    	    	  x:2,
+	    	    	  y:2,
+	    	    	  rotation:270
+	    	      },
+	    	],
+	    	room:[{
+	    		type:2,
+	    		system:{type:0}
+	    	},
+	    	{
+	    		type:1,
+	    		y:1,
+	    		system:{type:0}
+	    	},
+	    	{
+	    		type:4,
+	    		x:1,
+	    		y:1,
+	    		system:{type:2}
+	    	},
+	    	{
+	    		type:3,
+	    		x:3,
+	    		system:{type:0}
+	    	}]
+	    });
+	    this.anims.create({ key: 'open', frames: this.anims.generateFrameNames('rooms',{prefix:'door',start:0,end:5}) });
         this.anims.create({ key: 'close', frames: this.anims.generateFrameNames('rooms',{prefix:'door',start:5,end:0}) });
+	    this.ship.render(this).setScale(scale);
+	    /*this.room=this.add.sprite(0,0,'rooms','room2x1');
+	    //this.room.setScale(scale);
+        
+        this.door=this.add.sprite(0,-this.room.height/2,'rooms','door0');
+        //this.door.setOrigin(0.5,1);
+        //this.door.setScale(scale);
+        
         this.door.open=false;
         this.door.setInteractive(new Phaser.Geom.Rectangle(0, -this.door.height, this.door.width, this.door.height*3), Phaser.Geom.Rectangle.Contains);
         this.door.on('pointerdown',function(){
@@ -35,10 +100,7 @@ utlp.Ship.prototype = {
         });
         this.ship=this.add.container(this.game.width/2,this.game.height/2,[this.room,this.door]);
         this.ship.setSize(100,100);
-        this.ship.setScale(scale);
-	    /*
-
-    this.add.sprite(400, 300, 'gems').setScale(4).play('everything');*/
+        */
     },
 	update:function() {
 		for (var i = 0; i < this.max; i++)

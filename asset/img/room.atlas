@@ -16,10 +16,10 @@
     "asset/wip/airlock.png",
     "asset/wip/support2x1.png",
     "asset/wip/support2x2.png",
-    "asset/wip/shuttle1x1.png",
-    "asset/wip/shuttle2x1.png",
-    "asset/wip/shuttle2x2.png",
-    "asset/wip/intDef.png"
+    "asset/wip/intDef.png",
+    "asset/wip/reactor.png",
+    "asset/wip/shuttle.png",
+    "asset/wip/room1x2.png"
   ],
   "settings": {
     "pot": false,
