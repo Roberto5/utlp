@@ -9,58 +9,52 @@ utlp.Menu.prototype = {
     stars:[],
     jets:{},
     preload : function() {
-        //this.game.time.advancedTiming = true;
     },
     create: function(){
     	
-        //document.removeEventListener("backbutton", onBackKeyDown);
+        
         // star field
-        //this.sprites = this.game.add.spriteBatch();
     	this.stars=[];
 	       for (var i = 0; i < this.max; i++)
         {
             this.xx[i] =  Math.floor(Math.random() * this.game.width);
             this.yy[i] = Math.floor(Math.random() * this.game.height);
             var star=this.add.sprite(this.xx[i], this.yy[i], 'star');
-            //this.sprites.addChild(star);
-            //this.game.physics.enable(star, Phaser.Physics.ARCADE);
             this.stars.push(star);
         }
         //ship
         this.ship=this.add.sprite(100*scale,this.game.height/2,'ship');
         //this.ship.anchor.set(0.5);
         this.ship.setScale(scale);
-        //this.game.physics.enable(this.ship, Phaser.Physics.ARCADE);
         this.title=this.add.text(this.game.width/2, 10*scale, 'Until The Last Piece', {fill: '#fff'});
         this.title.setOrigin(0.5);
         this.title.setScale(scale);
-        this.jets = this.add.particles('jets');
-        this.jets.createEmitter({
-            //frame: 'jets',
+        // add particles of jets
+        this.jets1 = this.add.particles( -30 * scale,
+            20 * scale,'jets',
+            {
+                //frame: 'jets',
+                radial: false,
+                
+                lifespan: 1000,
+                speedX: { min: -150 * scale, max: -200 * scale },
+                quantity: 4,
+                gravityX: 0,
+                gravityY: 0,
+                follow: this.ship,
+                scale: { start: 1 * scale, end: 0, ease: 'Power3' },
+                blendMode: 'ADD',
+            }
+        );
+        this.jets2=this.add.particles(-30 * scale,-20 * scale,'jets',{
             radial: false,
-            x: -30*scale,
-            y: 20*scale,
             lifespan: 1000,
-            speedX: { min: -150*scale, max: -200*scale },
+            speedX: { min: -150 * scale, max: -200 * scale },
             quantity: 4,
-            gravityX:0,
-            gravityY:0,
-            follow:this.ship,
-            scale: { start: 1*scale, end: 0 , ease: 'Power3'},
-            blendMode: 'ADD',
-        });
-        this.jets.createEmitter({
-            //frame: 'jets',
-            radial: false,
-            x: -30*scale,
-            y: -20*scale,
-            lifespan: 1000,
-            speedX: { min: -150*scale, max: -200*scale },
-            quantity: 4,
-            gravityX:0,
-            gravityY:0,
-            follow:this.ship,
-            scale: { start: 1*scale, end: 0 , ease: 'Power3'},
+            gravityX: 0,
+            gravityY: 0,
+            follow: this.ship,
+            scale: { start: 1 * scale, end: 0, ease: 'Power3' },
             blendMode: 'ADD',
         });
         var d=50*scale;

@@ -1,0 +1,22 @@
+{
+  "name": "utlp",
+  "version": "1.0.0",
+  "description": "Roguelike html5 game",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server"
+  },
+  "keywords": [],
+  "author": "hitmanghe",
+  "license": "ISC",
+  "dependencies": {
+    "phaser": "^3.87.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

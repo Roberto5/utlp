@@ -1,3 +1,11 @@
+// author: Hitmaghe
+/**
+ * animate a text whit typing effect
+ * @param {string} text text to animate
+ * @param {int} time current time
+ * @param {int} delay delay between characters in milliseconds
+ * @returns string
+ */
 function typeInAnimation(text,time,delay){
     var n,r='';
     if (!delay) delay=100;
@@ -9,7 +17,13 @@ function typeInAnimation(text,time,delay){
     }
     return r;
 }
-
+/**
+ * animate a acronym whit typing effect
+ * @param {Array} text array of strings, each string is a word of the acronym
+ * @param {int} time current time
+ * @param {int} delay delay between characters in milliseconds
+ * @returns 
+ */
 function typeInAcronym(text,time,delay) {
     if (!delay) delay=100;
     if (!Array.isArray(text)) return "Error text isn't array";
