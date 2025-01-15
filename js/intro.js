@@ -9,6 +9,10 @@ utlp.Intro.prototype = {
 		}
 	},
     create: function(){ 
+		if (this.game.data.progress>0) {
+			this.game.scene.stop('Intro');
+			this.game.scene.start('Ship');
+		}
     	this.state=0;
     	this.t=new Date().getTime();
     	this.textIntro=this.add.text(50*scale,20*scale,"",{fill : '#fff'});
@@ -41,6 +45,7 @@ utlp.Intro.prototype = {
 			this.stay.visible=false;
 			this.leave.on('pointerdown',function(){
 				game.data.progress=1;
+				saveGame(game.data);
 				game.scene.start("Ship");
     			  game.scene.stop("Intro");
 			},this);

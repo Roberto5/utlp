@@ -17,70 +17,8 @@ utlp.Ship.prototype = {
 	    	var star=this.add.sprite(this.xx[i], this.yy[i], 'star');
 	    	this.stars.push(star);
 	    }
-	    this.ship=new Starship({
-	    	door:[
-	    	      {
-	    	    	  x:1,
-	    	    	  y:1,
-	    	    	  rotation:90
-	    	      },
-	    	      {
-	    	    	  x:1,
-	    	    	  y:1,
-	    	    	  rotation:180
-	    	      },
-	    	      {
-	    	    	  x:2,
-	    	    	  y:1,
-	    	    	  rotation:90
-	    	      },
-	    	      {
-	    	    	  x:2,
-	    	    	  y:1,
-	    	    	  rotation:0
-	    	      },
-	    	      {
-	    	    	  x:1,
-	    	    	  y:2,
-	    	    	  rotation:180
-	    	      },
-	    	      {
-	    	    	  x:1,
-	    	    	  y:2,
-	    	    	  rotation:270
-	    	      },
-	    	      {
-	    	    	  x:2,
-	    	    	  y:2,
-	    	    	  rotation:0
-	    	      },
-	    	      {
-	    	    	  x:2,
-	    	    	  y:2,
-	    	    	  rotation:270
-	    	      },
-	    	],
-	    	room:[{
-	    		type:2,
-	    		system:{type:0}
-	    	},
-	    	{
-	    		type:1,
-	    		y:1,
-	    		system:{type:0}
-	    	},
-	    	{
-	    		type:4,
-	    		x:1,
-	    		y:1,
-	    		system:{type:2}
-	    	},
-	    	{
-	    		type:3,
-	    		x:3,
-	    		system:{type:0}
-	    	}]
-	    });
+		soundOfSilence.scene=this;
+	    this.ship=new Starship(soundOfSilence);
 	    this.anims.create({ key: 'open', frames: this.anims.generateFrameNames('rooms',{prefix:'door',start:0,end:5}) });
         this.anims.create({ key: 'close', frames: this.anims.generateFrameNames('rooms',{prefix:'door',start:5,end:0}) });
 	    this.ship.render(this).setScale(scale);

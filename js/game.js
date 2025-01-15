@@ -3,7 +3,7 @@ utlp.Game = function(game){
  
 utlp.Game.prototype = {
     create: function(){ 
-      this.add.text(10, 10, 'this is a game', {fill: '#fff'});
+      //this.add.text(10, 10, 'this is a game', {fill: '#fff'});
       this.back=this.add.text(this.game.width-20*scale,this.game.height-50*scale,lang.back, {fill: '#fff'});
       this.back.setOrigin(1);
       this.back.setInteractive(new Phaser.Geom.Rectangle(0, 0, this.back.width, this.back.height), Phaser.Geom.Rectangle.Contains);
